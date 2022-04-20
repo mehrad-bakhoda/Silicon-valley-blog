@@ -1,0 +1,36 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["dataproxy", "fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+
+  content  String?
+  title    String  @unique @db.VarChar(255)
+  userId   Int?
+  user     User?   @relation(fields: [userId], references: [id])
+  draft    Boolean @default(true)
+  author   String
+  metaTags Json[]
+  ttr      String?
+  preview  String
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  articles  Article[]
+  createdAt DateTime  @default(now()) @map(name: "created_at")
+  updatedAt DateTime  @default(now()) @map(name: "updated_at")
+
+  @@map(name: "users")
+}
