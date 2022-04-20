@@ -41,7 +41,7 @@ export default function HomeFooter(props) {
 
   const content = {
     brand: { image: "/favicon.ico", width: 35, height: 35 },
-    copy: "© 2022 Winwork All rights reserved.",
+    copy: "© 2022 silicon valley All rights reserved.",
     link1: "Instagram",
     link2: "Twitter",
     link3: "Linkedin",
@@ -55,7 +55,7 @@ export default function HomeFooter(props) {
     brand = (
       <Image
         src={content.brand.image}
-        alt="Logo of the Winwork"
+        alt="Logo of the silicon valley"
         width={content.brand.width}
         height={content.brand.height}
       />

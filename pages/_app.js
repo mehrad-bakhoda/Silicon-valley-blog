@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8"></meta>
-        <title>WinWork</title>
+        <title>silicon valley</title>
       </Head>
       <Provider store={store}>
         <Component {...pageProps} />

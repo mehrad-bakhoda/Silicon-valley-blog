@@ -57,7 +57,7 @@ const NavBar = ({ authenticate, id }) => {
           >
             <Image
               src="/favicon.ico"
-              alt="Logo of the Winwork"
+              alt="Logo of the silicon valley"
               width={35}
               height={35}
             />
@@ -109,7 +109,7 @@ const NavBar = ({ authenticate, id }) => {
           >
             <Image
               src="/favicon.ico"
-              alt="Logo of Winwork"
+              alt="Logo of silicon valley"
               width={40}
               height={40}
             />
