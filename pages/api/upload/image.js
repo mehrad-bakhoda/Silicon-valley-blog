@@ -30,6 +30,19 @@ export default async function handle(req, res) {
 
     if (!found) return res.send({ ok: false, accessToken: "" });
     if (found) {
+      const images = await prisma.article.findFirst({
+        orderBy: [
+          {
+            id: "desc",
+          },
+        ],
+      });
+      if (images) {
+        c = images.id + 1;
+      } else {
+        c = 1;
+      }
+
       const dir = path.join(
         process.cwd(),
         "public",
@@ -54,16 +67,6 @@ export default async function handle(req, res) {
         const destination =
           "uploads/users/" + found.id + "/Products/" + c + "/" + fileName;
 
-        // const image = await prisma.image.create({
-        //   data: {
-        //     path: destination,
-        //     // article: {
-        //     //   connect: { id: payload.userId },
-        //     // },
-        //   },
-        // });
-
-        c++;
         res.status(200).json({ imageUrl: destination });
       });
     }
