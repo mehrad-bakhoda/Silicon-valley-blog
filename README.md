@@ -1,4 +1,4 @@
-# NextBlog: A Next.js Blogging Platform
+# SiliconValley: A Next.js Blogging Platform
 
 ## Introduction
 NextBlog is an intuitive and user-friendly blogging platform built with Next.js. It allows authenticated users to create and publish blog posts, featuring a rich text editor for content creation. The platform is designed to foster a community of bloggers and readers.
