@@ -25,11 +25,11 @@ NextBlog is an intuitive and user-friendly blogging platform built with Next.js.
 - **Next.js**: Utilizes server-side rendering for fast page loads and optimal SEO performance.
 - **User Authentication**: Secure login process implemented using NextAuth.
 - **Database Integration**: Efficient handling and retrieval of blog posts and user data.
-# Postgresql with prisma
-# SWR
-# redux/@toolkit
-# JWT
-# bcrypt
-# Material Ui
-# Jodit Editor
-# Next JS
+### Postgresql with prisma
+### SWR
+### redux/@toolkit
+### JWT
+### bcrypt
+### Material Ui
+### Jodit Editor
+### Next JS
